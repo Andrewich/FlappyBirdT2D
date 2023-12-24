@@ -2,7 +2,16 @@
     SceneLayer="1"
     Size="8 35"
     Position="50 -20"
-    BodyType="Kinematic"    
+    BodyType="Kinematic"
+    LinearVelocity="-10 0"
     Image="@asset=FlappyBird:Pipe"
-    Frame="0"
-    LinearVelocity="-10 0" />
+    Frame="0">
+    <Sprite.CollisionShapes>
+        <Polygon>
+            <Point>-4 -17.5</Point>
+            <Point>4 -17.5</Point>
+            <Point>4 17.5</Point>
+            <Point>-4 17.5</Point>
+        </Polygon>
+    </Sprite.CollisionShapes>
+</Sprite>

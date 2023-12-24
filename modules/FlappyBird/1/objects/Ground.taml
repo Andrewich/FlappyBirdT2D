@@ -1,12 +1,18 @@
-<Scroller    
+<Scroller
     Size="100 5"
     Position="0 -36"
-    FixedAngle="1"
+    FixedAngle="true"
     BodyType="Static"
     Image="@asset=FlappyBird:Ground"
     Frame="0"
-    repeatX="1"
     scrollX="3"
-    scrollPositionX="0.5" />
-	
-<!--SceneLayer="0"-->
+    scrollPositionX="0.5">
+    <Scroller.CollisionShapes>
+        <Polygon>
+            <Point>-50 -2.5</Point>
+            <Point>50 -2.5</Point>
+            <Point>50 2.5</Point>
+            <Point>-50 2.5</Point>
+        </Polygon>
+    </Scroller.CollisionShapes>
+</Scroller>

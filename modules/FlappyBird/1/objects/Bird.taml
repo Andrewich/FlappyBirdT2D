@@ -1,16 +1,18 @@
 <Sprite
-	Name="Bird"	    
-	Position="0 35"
-    Size="5 4"	    
+    Name="Bird"
+    Size="5 4"
+    Position="0 35"
+	FixedAngle="true"
+    GravityScale="10"
+    CollisionCallback="true"
     Image="@asset=FlappyBird:Bird"
-    Frame="0" 		
-	GravityScale="10"
-	BodyType="Dynamic"
-	CollisionCallback="1" >
+    Frame="0">
+    <Sprite.CollisionShapes>
+        <Polygon>
+            <Point>-2.5 -2</Point>
+            <Point>2.5 -2</Point>
+            <Point>2.5 2</Point>
+            <Point>-2.5 2</Point>
+        </Polygon>
+    </Sprite.CollisionShapes>
 </Sprite>
-
-<!--SceneLayer="1"
-PolygonBoxCollisionShape="15 14"
-    BodyType="Dynamic"
-	CollisionCallback="1"
-	CollisionGroups="15"-->

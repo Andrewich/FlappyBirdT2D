@@ -1,5 +1,4 @@
 <SceneWindow
     Name="GameWindow"
-    Profile="SceneWindowProfile"
-	LockMouse="1"
+    Profile="SceneWindowProfile"	
     UseObjectInputEvents="1" />
