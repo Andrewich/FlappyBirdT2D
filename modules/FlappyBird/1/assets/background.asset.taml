@@ -1,0 +1,4 @@
+<ImageAsset
+    AssetName = "Background"
+    ImageFile = "background.png"
+    FilterMode = "Bilinear" />    

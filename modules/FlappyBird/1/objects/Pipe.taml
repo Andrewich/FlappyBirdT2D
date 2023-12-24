@@ -1,0 +1,8 @@
+<Sprite
+    SceneLayer="1"
+    Size="8 35"
+    Position="50 -20"
+    BodyType="Kinematic"    
+    Image="@asset=FlappyBird:Pipe"
+    Frame="0"
+    LinearVelocity="-10 0" />

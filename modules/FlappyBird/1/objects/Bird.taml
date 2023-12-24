@@ -1,0 +1,16 @@
+<Sprite
+	Name="Bird"	    
+	Position="0 35"
+    Size="5 4"	    
+    Image="@asset=FlappyBird:Bird"
+    Frame="0" 		
+	GravityScale="10"
+	BodyType="Dynamic"
+	CollisionCallback="1" >
+</Sprite>
+
+<!--SceneLayer="1"
+PolygonBoxCollisionShape="15 14"
+    BodyType="Dynamic"
+	CollisionCallback="1"
+	CollisionGroups="15"-->

@@ -1,0 +1,11 @@
+<Scroller
+    SceneLayer="31"
+    Size="100 75"
+    Position="0 0"
+    FixedAngle="1"
+    BodyType="Static"
+    Image="@asset=FlappyBird:Background"
+    Frame="0"
+    repeatX="1"
+    scrollX="5"
+    scrollPositionX="0.5" />

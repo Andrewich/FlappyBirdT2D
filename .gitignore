@@ -1,0 +1,6 @@
+*.exe
+*.dll
+*.dso
+*.torsion.exports
+*.torsion.opt
+console.log

@@ -1,0 +1,21 @@
+<ModuleDefinition
+	ModuleId="AppCore"
+	VersionId="1"
+	BuildID="2"
+	Description="Provides critical initialization and functionality needed for every project."
+	ScriptFile="appCore.cs"
+	CreateFunction="create"
+	DestroyFunction="destroy"
+	Project="FlappyBirdT2D"
+	ProjectDescription="Clone of the famous game Flappy Bird!"
+	Icon="projectIcon.png"
+	Synchronized="1" >
+	<DeclaredAssets
+		Path="gui"
+		Extension="asset.taml"
+		Recurse="true"/>
+	<DeclaredAssets
+		Path="fonts"
+		Extension="asset.taml"
+		Recurse="false"/>
+</ModuleDefinition>

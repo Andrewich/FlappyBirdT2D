@@ -1,0 +1,4 @@
+<ImageAsset
+    AssetName = "Pipe"
+    ImageFile = "pipe.png"
+    FilterMode = "NEAREST" />

@@ -1,0 +1,4 @@
+<ImageAsset
+    AssetName = "Bird"
+    ImageFile = "bird.png"
+    FilterMode = "Nearest" />
