@@ -1,4 +1,22 @@
 <Scene
     Name="GameScene" 
-    Gravity="0 -10" >
+    Gravity="0 -15" >
+	<SceneObject
+        BodyType="Static">
+        <SceneObject.CollisionShapes>
+            <Edge>
+                <Point>-12.5 11</Point>
+                <Point>12.15 11</Point>
+            </Edge>
+        </SceneObject.CollisionShapes>
+    </SceneObject>
+    <SceneObject
+        BodyType="Static">
+        <SceneObject.CollisionShapes>
+            <Edge>
+                <Point>-12.5 -11</Point>
+                <Point>12.15 -11</Point>
+            </Edge>
+        </SceneObject.CollisionShapes>
+    </SceneObject>
 </Scene>

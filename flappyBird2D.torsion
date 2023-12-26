@@ -10,21 +10,13 @@
     <Configs>
         <Config>
             <Name>Release</Name>
-            <Executable>FlappyBirdT2D.exe</Executable>
+            <Executable>Torque2D.exe</Executable>
             <Arguments/>
             <HasExports>true</HasExports>
             <Precompile>false</Precompile>
             <InjectDebugger>true</InjectDebugger>
             <UseSetModPaths>false</UseSetModPaths>
-        </Config>
-        <Config>
-            <Name>Debug</Name>
-            <Executable>FlappyBirdT2D_DEBUG.exe</Executable>
-            <HasExports>false</HasExports>
-            <Precompile>false</Precompile>
-            <InjectDebugger>true</InjectDebugger>
-            <UseSetModPaths>false</UseSetModPaths>
-        </Config>
+        </Config>        
     </Configs>
     <SearchURL/>
     <SearchProduct>main</SearchProduct>

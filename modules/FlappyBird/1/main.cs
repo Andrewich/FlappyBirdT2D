@@ -20,22 +20,25 @@ function FlappyBird::destroy( %this )
 function FlappyBird::loadGame(%this)
 {
    %window = TamlRead("./objects/SceneWindow.taml");
+   %window.setCameraSize(25, 18.75);   
    Canvas.setContent(%window);
 
    %scene = TamlRead("./objects/Scene.taml");
-   %window.setScene(%scene);
+   %window.setScene(%scene);   
 
    %background = TamlRead("./objects/Background.taml");
    %scene.add(%background);
    
-   %ground = TamlRead("./objects/Ground.taml");
-   %scene.add(%ground);
+   //%ground = TamlRead("./objects/Ground.taml");
+   //%scene.add(%ground);
    
-   %bird = TamlRead("./objects/Bird.taml");
+   %bird = TamlRead("./objects/Bird.taml");   
    %scene.add(%bird);
    
-   %pipe = TamlRead("./objects/Pipe.taml");
-   %scene.add(%pipe);
+   TamlWrite( %scene, "stuff.taml");
+   
+   //%pipe = TamlRead("./objects/Pipe.taml");
+   //%scene.add(%pipe);
    //%pipe.createPolygonBoxCollisionShape();   
    //TamlWrite( %pipe, "stuff.taml" );
    
