@@ -1,17 +1,17 @@
 <Sprite
     SceneLayer="1"
-    Size="8 35"
-    Position="50 -20"
+    Size="2 8.75"
+    Position="14.5 -5"
     BodyType="Kinematic"
-    LinearVelocity="-10 0"
+    LinearVelocity="-5 0"
     Image="@asset=FlappyBird:Pipe"
     Frame="0">
     <Sprite.CollisionShapes>
         <Polygon>
-            <Point>-4 -17.5</Point>
-            <Point>4 -17.5</Point>
-            <Point>4 17.5</Point>
-            <Point>-4 17.5</Point>
+            <Point>-1 -4.375</Point>
+            <Point>1 -4.375</Point>
+            <Point>1 4.375</Point>
+            <Point>-1 4.375</Point>
         </Polygon>
     </Sprite.CollisionShapes>
 </Sprite>
