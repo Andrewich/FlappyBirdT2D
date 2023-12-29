@@ -1,7 +1,7 @@
 <Scene
-    Name="GameScene" 
-    Gravity="0 -15" >
-	<SceneObject
+    Name="GameScene"
+    Gravity="0 -15">
+    <SceneObject
         BodyType="Static">
         <SceneObject.CollisionShapes>
             <Edge>
@@ -19,4 +19,30 @@
             </Edge>
         </SceneObject.CollisionShapes>
     </SceneObject>
+    <Scroller
+        SceneLayer="31"
+        Size="25 18.75"
+        FixedAngle="true"
+        BodyType="Static"
+        Image="@asset=FlappyBird:Background"
+        Frame="0"
+        scrollX="2"
+        scrollPositionX="0.5" />
+    <Sprite
+        Name="Bird"
+        Size="1.25 1"
+        FixedAngle="true"
+        Active="false"
+        CollisionCallback="true"
+        Image="@asset=FlappyBird:Bird"
+        Frame="0">
+        <Sprite.CollisionShapes>
+            <Polygon>
+                <Point>0.625 -0.5</Point>
+                <Point>0.625 0.5</Point>
+                <Point>-0.625 0.5</Point>
+                <Point>-0.625 -0.5</Point>
+            </Polygon>
+        </Sprite.CollisionShapes>
+    </Sprite>    
 </Scene>

@@ -5,6 +5,7 @@
 	FixedAngle="true"
 	BodyType="Dynamic"	
     CollisionCallback="true"
+	Active="false"
     Image="@asset=FlappyBird:Bird"
     Frame="0">
     <Sprite.CollisionShapes>

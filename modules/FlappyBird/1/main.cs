@@ -21,32 +21,62 @@ function FlappyBird::destroy( %this )
 function FlappyBird::loadGame(%this)
 {
    %window = TamlRead("./objects/SceneWindow.taml");
-   %window.setCameraSize(25, 18.75);   
+   %window.setCameraSize(25, 18.75);
+   //%window.setCameraSize(50, 37.5);
    Canvas.setContent(%window);
 
    %scene = TamlRead("./objects/Scene.taml");
    %window.setScene(%scene);   
 
-   %background = TamlRead("./objects/Background.taml");
-   %scene.add(%background);
+   //%background = TamlRead("./objects/Background.taml");
+   //%scene.add(%background);
    
    //%ground = TamlRead("./objects/Ground.taml");
    //%scene.add(%ground);
    
-   %bird = TamlRead("./objects/Bird.taml");   
-   %scene.add(%bird);
+   //%bird = TamlRead("./objects/Bird.taml");   
+   //%scene.add(%bird);
    
-   %pipe = new Sprite() {
-      class = "Pipe";
-      SceneLayer = 1;
-      Position = "12.5 -5";
-      Size = "2 8.75";
-      BodyType = "Kinematic";        
-      Image = "FlappyBird:Pipe";
-      Frame = 0;         
-   };   
-   %scene.add(%pipe);
-   %pipe.moveTo("-12.5 -5", 5);
+   //%pipe = new Sprite() {
+      //class = "Pipe";
+      //SceneLayer = 1;
+      //Position = "12.5 -5";
+      //Size = "2 8.75";
+      //BodyType = "Kinematic";        
+      //Image = "FlappyBird:Pipe";
+      //Frame = 0;         
+   //};
+   //%scene.add(%pipe);
+   //%pipe.moveTo("-12.5 -5", 5);
+   
+   %pipes = TamlRead("./objects/Pipes.taml");   
+   //%pipes.listObjects();   
+   for (%index = 0; %index < %pipes.getCount(); %index++)
+   {
+      %pipe = %pipes.getObject(%index);
+      %scene.add(%pipe);
+      %pipe.moveToEnd();
+   }
+   
+   //%pipes = new SimSet();
+   //for (%count = 0; %count < 3; %count++)
+   //{
+      //%pipe = new Sprite() {
+         //class = "Pipe";
+         //origin = "14.5 -5";
+         //SceneLayer = 1;
+         //Size = "2 8.75";
+         //BodyType = "Kinematic";
+         //Image = "FlappyBird:Pipe";
+         //Frame = 0;
+      //};
+      //%pipe.createPolygonBoxCollisionShape();
+      //%pipe.setPosition(14.5 + (%count * 10), -5 );      
+      //%scene.add(%pipe);      
+      //%pipe.moveToEnd();
+      //%pipes.add(%pipe);
+   //}
+   //TamlWrite(%pipes, "stuff.taml");
       
    
    //TamlWrite( %scene, "stuff.taml");
@@ -72,6 +102,7 @@ function FlappyBird::loadGame(%this)
    //%pipe = TamlRead("./objects/Pipe.taml");
    //%scene.add(%pipe);   
    //TamlWrite( %pipe, "stuff.taml" );
+   //TamlWrite(%scene, "stuff.taml");
    
    %scene.setDebugOn( "collision" );
 }
