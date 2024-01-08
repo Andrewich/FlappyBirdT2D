@@ -1,15 +1,15 @@
 function FlappyBird::create( %this )
-{   
+{
+   setRandomSeed(getRealTime());   
+   
    // Load all scripts
    exec("./scripts/Bird.cs");
-   exec("./scripts/Pipe.cs");
-   exec("./scripts/SceneWindow.cs");
+   exec("./scripts/Pipes.cs");
+   //exec("./scripts/SceneWindow.cs");
    
    // Load the game
    %this.loadGame();
 }
-
-//-----------------------------------------------------------------------------
 
 function FlappyBird::destroy( %this )
 {
@@ -26,16 +26,18 @@ function FlappyBird::loadGame(%this)
    Canvas.setContent(%window);
 
    %scene = TamlRead("./objects/Scene.taml");
-   %window.setScene(%scene);   
+   %window.setScene(%scene);
    
+   %window.addInputListener(Bird);   
+
    %pipes = TamlRead("./objects/Pipes.taml");   
    for (%index = 0; %index < %pipes.getCount(); %index++)
    {
       %pipe = %pipes.getObject(%index);
       %scene.add(%pipe);
-      %pipe.moveToEnd();
+      //%pipe.moveToEnd();
    }
-   
+
    %scene.setDebugOn( "collision" );
 }
 

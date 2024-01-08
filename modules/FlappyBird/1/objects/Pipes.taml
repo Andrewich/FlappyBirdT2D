@@ -1,27 +1,67 @@
 <SimSet>
-    <Sprite
-        class="Pipe"
+	<Sprite
+        class="TopPipe"
         SceneLayer="1"
-        Size="2 8.75"
-        Position="14.5 -5"
+        Size="2 12.75"
+        Position="14.5 15"
         BodyType="Kinematic"
         LinearVelocity="-5 0"
         Image="@asset=FlappyBird:Pipe"
         Frame="0"
+		FlipY="true"
         origin="14.5 -5">
         <Sprite.CollisionShapes>
-            <Polygon>
-                <Point>-1 -4.375</Point>
-                <Point>1 -4.375</Point>
-                <Point>1 4.375</Point>
-                <Point>-1 4.375</Point>
-            </Polygon>
-        </Sprite.CollisionShapes>
+			<Polygon>
+				<Point>-1 -6.375</Point>
+				<Point>1 -6.375</Point>
+				<Point>1 6.375</Point>
+				<Point>-1 6.375</Point>
+			</Polygon>
+		</Sprite.CollisionShapes>
     </Sprite>
     <Sprite
-        class="Pipe"
+        class="BottomPipe"		
         SceneLayer="1"
-        Size="2 8.75"
+        Size="2 12.75"
+        Position="14.5 -5"
+        BodyType="Kinematic"
+        LinearVelocity="-5 0"
+        Image="@asset=FlappyBird:Pipe"
+        Frame="0"		
+        origin="14.5 -5">
+        <Sprite.CollisionShapes>
+			<Polygon>
+				<Point>-1 -6.375</Point>
+				<Point>1 -6.375</Point>
+				<Point>1 6.375</Point>
+				<Point>-1 6.375</Point>
+			</Polygon>
+		</Sprite.CollisionShapes>
+    </Sprite>
+	<Sprite
+        class="TopPipe"
+        SceneLayer="1"
+        Size="2 12.75"
+        Position="24.5 15"
+        BodyType="Kinematic"
+        LinearVelocity="-5 0"
+        Image="@asset=FlappyBird:Pipe"
+        Frame="0"
+		FlipY="true"
+        origin="14.5 -5">
+        <Sprite.CollisionShapes>
+			<Polygon>
+				<Point>-1 -6.375</Point>
+				<Point>1 -6.375</Point>
+				<Point>1 6.375</Point>
+				<Point>-1 6.375</Point>
+			</Polygon>
+		</Sprite.CollisionShapes>
+    </Sprite>
+    <Sprite
+        class="BottomPipe"		
+        SceneLayer="1"
+        Size="2 12.75"
         Position="24.5 -5"
         BodyType="Kinematic"
         LinearVelocity="-5 0"
@@ -29,18 +69,38 @@
         Frame="0"
         origin="14.5 -5">
         <Sprite.CollisionShapes>
-            <Polygon>
-                <Point>-1 -4.375</Point>
-                <Point>1 -4.375</Point>
-                <Point>1 4.375</Point>
-                <Point>-1 4.375</Point>
-            </Polygon>
-        </Sprite.CollisionShapes>
+			<Polygon>
+				<Point>-1 -6.375</Point>
+				<Point>1 -6.375</Point>
+				<Point>1 6.375</Point>
+				<Point>-1 6.375</Point>
+			</Polygon>
+		</Sprite.CollisionShapes>
+    </Sprite>
+	<Sprite
+        class="TopPipe"
+        SceneLayer="1"
+        Size="2 12.75"
+        Position="34.5 15"
+        BodyType="Kinematic"
+        LinearVelocity="-5 0"
+        Image="@asset=FlappyBird:Pipe"
+        Frame="0"
+		FlipY="true"
+        origin="14.5 -5">
+        <Sprite.CollisionShapes>
+			<Polygon>
+				<Point>-1 -6.375</Point>
+				<Point>1 -6.375</Point>
+				<Point>1 6.375</Point>
+				<Point>-1 6.375</Point>
+			</Polygon>
+		</Sprite.CollisionShapes>
     </Sprite>
     <Sprite
-        class="Pipe"
+        class="BottomPipe"		
         SceneLayer="1"
-        Size="2 8.75"
+        Size="2 12.75"
         Position="34.5 -5"
         BodyType="Kinematic"
         LinearVelocity="-5 0"
@@ -48,12 +108,12 @@
         Frame="0"
         origin="14.5 -5">
         <Sprite.CollisionShapes>
-            <Polygon>
-                <Point>-1 -4.375</Point>
-                <Point>1 -4.375</Point>
-                <Point>1 4.375</Point>
-                <Point>-1 4.375</Point>
-            </Polygon>
-        </Sprite.CollisionShapes>
+			<Polygon>
+				<Point>-1 -6.375</Point>
+				<Point>1 -6.375</Point>
+				<Point>1 6.375</Point>
+				<Point>-1 6.375</Point>
+			</Polygon>
+		</Sprite.CollisionShapes>
     </Sprite>
 </SimSet>

@@ -1,6 +1,6 @@
 <Scene
     Name="GameScene"
-    Gravity="0 -15">
+    Gravity="0 -20">
     <SceneObject
         BodyType="Static">
         <SceneObject.CollisionShapes>
@@ -31,8 +31,9 @@
     <Sprite
         Name="Bird"
         Size="1.25 1"
+		Position="0 9"
         FixedAngle="true"
-        Active="false"
+        Active="true"
         CollisionCallback="true"
         Image="@asset=FlappyBird:Bird"
         Frame="0">

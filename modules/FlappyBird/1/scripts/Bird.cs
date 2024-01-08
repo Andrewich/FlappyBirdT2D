@@ -1,9 +1,17 @@
-function Bird::Jump(%this)
+// Input listener
+function Bird::onTouchDown(%this, %touchID, %worldPosition)
 {   
-   %this.setLinearVelocity("0 11");   
+   Bird.jump();
 }
 
 function Bird::onCollision(%this, %object, %collisionDetails)
 {
    echo("COLLISION");
+}
+
+//-----------------------------------------------------------------------------
+
+function Bird::jump(%this)
+{   
+   %this.setLinearVelocity("0 11");   
 }

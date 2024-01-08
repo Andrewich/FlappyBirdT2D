@@ -34,12 +34,16 @@ function AppCore::create( %this )
     %this.initializeCanvas(%module.Project);
 
 	// Load other modules    
-    ModuleDatabase.loadExplicit("FlappyBird");
+	//ModuleManager.loadGroup("launch");
+    //ModuleDatabase.loadExplicit("FlappyBird");
+    ModuleDatabase.loadGroup("launch");    
 }
 
 //-----------------------------------------------------------------------------
 
 function AppCore::destroy( %this )
 {    
-    ModuleDatabase.unloadExplicit("FlappyBird");
+    //ModuleDatabase.unloadExplicit("FlappyBird");
+    //ModuleDatabase.unloadGroup("launch");
+    //ModuleManager.unloadGroup("launch");
 }
