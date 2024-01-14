@@ -20,25 +20,36 @@ function FlappyBird::destroy( %this )
 
 function FlappyBird::loadGame(%this)
 {
-   %window = TamlRead("./objects/SceneWindow.taml");
-   %window.setCameraSize(25, 18.75);
-   //%window.setCameraSize(50, 37.5);
-   Canvas.setContent(%window);
+   %window = TamlRead( "./objects/SceneWindow.taml" );
+   //%window.setCameraSize(25, 18.75);
+   %window.setCameraSize( 50, 37.5 );
+   Canvas.setContent( %window );   
 
-   %scene = TamlRead("./objects/Scene.taml");
-   %window.setScene(%scene);
+   %scene = TamlRead( "./objects/Scene.taml" );
+   %window.setScene( %scene );
    
-   %window.addInputListener(Bird);   
-
-   %pipes = TamlRead("./objects/Pipes.taml");   
-   for (%index = 0; %index < %pipes.getCount(); %index++)
-   {
-      %pipe = %pipes.getObject(%index);
-      %scene.add(%pipe);
-      //%pipe.moveToEnd();
-   }
+   %window.addInputListener( Bird );
+   Bird.setActive(false);
+   
+   createPipes( %scene );
 
    %scene.setDebugOn( "collision" );
+}
+
+function createPipes(%scene)
+{   
+   for (%i = 0; %i < 3; %i++)
+   {            
+      %posX = 14.5 + %i * 10;
+      %posY = BottomPipe::getRandomY();
+      %pipeBottom = Pipe::create( "BottomPipe", %posX SPC %posY );      
+      %scene.add( %pipeBottom );
+      %pipeBottom.moveToEnd( %posY );
+      
+      //%pipeTop = Pipe::create( "TopPipe", %posX SPC %posY + getRandom( 2, 8 ) );
+      //%scene.add( %pipeTop );
+      //%pipeTop.moveToEnd( %posY );
+   }   
 }
 
 if (!isObject(SceneWindowProfile)) new GuiControlProfile(SceneWindowProfile)
