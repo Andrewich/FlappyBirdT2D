@@ -24,50 +24,36 @@ function Pipe::moveToEnd( %this, %posY )
 
 function Pipe::getRandomY( %this )
 {
-   if ( %this.class $= "TopPipe" )
-   {
-      return TopPipe::getRandomY();
-   }
-   else 
-   {
-      %rand = BottomPipe::getRandomY(); 
-      echo ( %rand );
-      return %rand;
-   }
+   if ( %this.class $= "TopPipe" )   
+      return TopPipe::getRandomY();   
+   else
+      return BottomPipe::getRandomY();   
 }
 
 function Pipe::onMoveToComplete( %this )
 {
    %this.setPositionX( 14.5 );
    %posY = Pipe::getRandomY( %this );
+   //echo( %this.class SPC ": " SPC %posY );
    %this.setPositionY( %posY );   
    Pipe::moveToEnd( %this, %posY );
 }
 
 //-BottomPipe------------------------------------------------------------------
 
-//function BottomPipe::onMoveToComplete( %this )
-//{   
-   //%this.setPositionX( 14.5 );
-   //%posY = BottomPipe::getRandomY();
-   //%this.setPositionY( %posY );
-   //%this.moveToEnd( %posY );
-//}
-
 function BottomPipe::getRandomY()
 {   
-   return getRandom(-5.75, -12.75) + getRandom();
+   //return getRandom(-6.75, -12.75) + getRandom();
+   %posY = getRandom(-8.375, -15.6) + getRandom();
+   echo( %posY );
+   return %posY;//getRandom(-9, 0) + getRandom();
 }
 
-//function TopPipe::onMoveToComplete( %this )
-//{
-   //%this.setPositionX( 14.5 );
-   //%posY = TopPipe::getRandomY();
-   //%this.setPosition( %posY );
-   //%this.moveToEnd( %posY );
-//}
+//-TopPipe---------------------------------------------------------------------
 
 function TopPipe::getRandomY()
 {
-   return getRandom( -3, 12.75 ) + getRandom();
+   //return getRandom( 8.75, 12.75 ) + getRandom();
+   %posY = getRandom( 8.375, 15.6 ) + getRandom();
+   return %posY;//getRandom( 4, 12.75 ) + getRandom();
 }
